@@ -1,4 +1,4 @@
-# TRIFORCIA CRUISE TRAVEL AGENCY APP PROJECT</center>
+# TRIFORCIA CRUISE TRAVEL AGENCY APP PROJECT
 
 ## 1.  General:
 
@@ -20,24 +20,66 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 ## 3.	Requirements:
 
-a.  A Salesforce App needs to be created on Salesforce platform so that all stakeholders can reach any provided services from any device (desktop, laptop, mobile) or any place.
+  - A Salesforce App needs to be created on Salesforce platform so that all stakeholders can reach any provided services from any device (desktop, laptop, mobile) or any place.
 
-b.	App theme needs to align with company’s current branding. Branding logo and color palette should be same as website logo and branding style.
+  - App theme needs to align with company’s current branding. Branding logo and color palette should be same as website logo and branding style.
 
-c.	Basic sale process should start with a Campaign (Advertisement, Email, Phone etc). Then potential customers need to be put into lead category. Once Leads shows interest about buying offered products or services, they need to be converted to Guests, Members and Deals records.
+  - Basic sale process should start with a Campaign (Advertisement, Email, Phone etc). Then potential customers need to be put into lead category. Once Leads shows interest about buying offered products or services, they need to be converted to Guests, Members and Deals records.
 
-d.	Dynamic data like ship, cabin, product and contract needs to be stored separately to make data more manageable in case of future updates. Also, relation between these objects needs to be defined correctly so that for example if a ship has been deleted related cabins also needs to be deleted from the database.
+  - Dynamic data like ship, cabin, product and contract needs to be stored separately to make data more manageable in case of future updates. Also, relation between these objects needs to be defined correctly so that for example if a ship has been deleted related cabins also needs to be deleted from the database.
 
-e.	For strategic planning, also expanse and income records need to be created from every completed sale. 
+  - For strategic planning, also expanse and income records need to be created from every completed sale. 
 
-f.	An internal approval process needs to be set for contract sign off. For initial phase, contracts that have commission rate less than %20 will be allowed to be signed off by deal owner. If it is more than %20, direct manager of deal owner needs to approve signing off of the related contract. The approval process needs to be created in optimum way so that future approval steps or conditions can be added or removed easily and quickly.
+  - An internal approval process needs to be set for contract sign off. For initial phase, contracts that have commission rate less than %20 will be allowed to be signed off by deal owner. If it is more than %20, direct manager of deal owner needs to approve signing off of the related contract. The approval process needs to be created in optimum way so that future approval steps or conditions can be added or removed easily and quickly.
 
-g.	In addition to business process, an additional emergency process needs to be defined for urgent health evacuation or broken ship evacuation. In this process, nearby hospitals and helicopter agencies will be our additional stakeholders. Since the process requires special attention and mostly human interactions, this process will be handled on a separate page as tasks and responsible users will handle tasks urgently under supervision of their managers. The process should include necessary assignments, notifications, emails, dashboards for available nearby hospitals, helicopter agencies, instant real-time weather conditions, ship, hospital, helicopter details etc.
+  - In addition to business process, an additional emergency process needs to be defined for urgent health evacuation or broken ship evacuation. In this process, nearby hospitals and helicopter agencies will be our additional stakeholders. Since the process requires special attention and mostly human interactions, this process will be handled on a separate page as tasks and responsible users will handle tasks urgently under supervision of their managers. The process should include necessary assignments, notifications, emails, dashboards for available nearby hospitals, helicopter agencies, instant real-time weather conditions, ship, hospital, helicopter details etc.
 
-h.	As best practices, use standard objects and business processes as much as possible. Instead of creating new custom objects try to use record types to keep integrity of the data.
+  - As best practices, use standard objects and business processes as much as possible. Instead of creating new custom objects try to use record types to keep integrity of the data.
 
-i.	Every object data including standard objects and custom objects needs to be reportable. Leadership and ends users should have necessary dashboards and reports available for all app data based on their permission allowance.
+  - Every object data including standard objects and custom objects needs to be reportable. Leadership and ends users should have necessary dashboards and reports available for all app data based on their permission allowance.
 
-j.	Triforcia Cruise Travel Agency have some historic data available from previous processes or applications that can be incorporated to this Salesforce app. These data also need to be imported to Salesforce environment. 
+  - Triforcia Cruise Travel Agency have some historic data available from previous processes or applications that can be incorporated to this Salesforce app. These data also need to be imported to Salesforce environment. 
 
-k.	In addition to above historic data there are also some historic data on a separate Salesforce org that needs to be shown as separate tab on current Salesforce org. In order to fulfill this requirement, a cross org connection needs to be established and related data needs to be present on a separate custom tab in same app.
+  - In addition to above historic data there are also some historic data on a separate Salesforce org that needs to be shown as separate tab on current Salesforce org. In order to fulfill this requirement, a cross org connection needs to be established and related data needs to be present on a separate custom tab in same app.
+
+## 4. Solutions:
+  - Lightning App:
+    - Theme Customization
+    - Branding
+    - Tab Order
+    
+  - Lightning App Page (Emergency page):
+    - Visualforce pages
+    - Embeded iFrames
+    - LWC Weather Component
+
+  - Standard and Custom Objects
+  - Built record types for the objects
+  - Custom record layouts for the object record pages
+  - Master Detail and Lookup relations
+  - Formula fields
+  - Custom picklists
+    - Dashboard
+    - Charts
+    - Reports
+  - Reports
+    - Standard
+    - Custom
+    - Joined Reports
+  - Approval process (Contract object)
+  - Flow for Expense and Income calculations
+  - Telephony integration
+  - Creating users and permission
+  - Gmail Integration
+  - Outlook Integration
+  - Creating API connection
+  - Creating Apex class and helper classes
+  - Using Apex Trigger for Emergency Task logic
+  - Apex trigger for cabin occupied
+  - Data import to import sample data
+  - Cross Org integration for Historic data
+  - Custom Notifications
+  - Lookup Filters
+
+## 4	Attachments:
+
