@@ -42,6 +42,10 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
   - In addition to above historic data there are also some historic data on a separate Salesforce org that needs to be shown as separate tab on current Salesforce org. In order to fulfill this requirement, a cross org connection needs to be established and related data needs to be present on a separate custom tab in same app.
 
+  - Previously used systems like gmail, outlook, telephony etc. needs to be integrated applications so that end users can use them during marketing and sale process.
+
+  - Validations or filters needs to be placed for any kind of required fields or any kind of processes like avoiding double booking same room to different customers or not being able to close a deal without a contract selection etc. 
+
 ## 4. Solutions:
   - Lightning App:
     - Theme Customization
@@ -53,13 +57,13 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     - Embeded iFrames
     - LWC Weather Component
 
-  - Standard and Custom Objects
-  - Built record types for the objects
-  - Custom record layouts for the object record pages
+  - Standard / Custom Objects
   - Master Detail and Lookup relations
+  - Record Types for Different Processes
+  - Custom record layouts for the object record pages
   - Formula fields
   - Custom picklists
-    - Dashboard
+  - Dashboards
     - Charts
     - Reports
   - Reports
@@ -67,9 +71,9 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     - Custom
     - Joined Reports
   - Approval process (Contract object)
+  - Users and permissions
   - Flow for Expense and Income calculations
   - Telephony integration
-  - Creating users and permission
   - Gmail Integration
   - Outlook Integration
   - Creating API connection
