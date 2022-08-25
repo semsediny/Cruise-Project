@@ -1,24 +1,26 @@
+<span style="text-align: center"><img width="90" alt="image" src="https://user-images.githubusercontent.com/33948183/186741201-369111e0-287e-416a-91b3-b1e64f560000.png"></span>
+
 # TRIFORCIA CRUISE TRAVEL AGENCY APP PROJECT
 
 ## 1.  General:
 
 <span style="color:blue">some *blue* text</span>
 
-Triforcia is a Cruise Travel Agency company. Triforcia agency currently maintaining business processes in classical way and mostly by running business by assigning manual tasks to employees. Company has a website for customers to interact and check deals. The website is also used for advertisement purpose. All customer communications and processes handled by emails, phone calls and excel sheets.
+   - Triforcia is a Cruise Travel Agency company. Triforcia agency currently maintaining business processes in classical way and mostly by running business by assigning manual tasks to employees. Company has a website for customers to interact and check deals. The website is also used for advertisement purpose. All customer communications and processes handled by emails, phone calls and excel sheets.
 
-Company can’t keep up with increased customer volume and agile response requirements. Old manual business processes are not enough to keep growth rate in a maximum level.
+   - Company can’t keep up with increased customer volume and agile response requirements. Old manual business processes are not enough to keep growth rate in a maximum level.
 
-Triforcia leadership decided to use a CRM system to improve separate current business process efficiency and offer better service to current or potential customers.
+   - Triforcia leadership decided to use a CRM system to improve separate current business process efficiency and offer better service to current or potential customers.
 
-Salesforce is a well-known CRM system and leadership wants to see a proof-of-concept Salesforce application that can cover all the emerging requirements.
+   - Salesforce is a well-known CRM system and leadership wants to see a proof-of-concept Salesforce application that can cover all the emerging requirements.
 
 ## 2.  Company Information:
 
-Triforcia Cruise Agency is providing staying and entertaining services on Cruise Ships. Customers can book a room on a ship and select pre-defined entertainment packages during sail duration. 
+   - Triforcia Cruise Agency is providing staying and entertaining services on Cruise Ships. Customers can book a room on a ship and select pre-defined entertainment packages during sail duration. 
 
-They can attend standard events on the ship. Also, they can attend specific events as well with extra costs. Based on the route of the ships, some specific events can be sold to customers in addition to ship room or cabin allocation.
+   - They can attend standard events on the ship. Also, they can attend specific events as well with extra costs. Based on the route of the ships, some specific events can be sold to customers in addition to ship room or cabin allocation.
 
-Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are being sold by Triforcia according to mutual contracts and booked to customers with some added commissions. In addition to ship owners, customers also need to sign contract in every purchase. 
+   - Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are being sold by Triforcia according to mutual contracts and booked to customers with some added commissions. In addition to ship owners, customers also need to sign contract in every purchase. 
 
 ## 3.	Requirements:
 
