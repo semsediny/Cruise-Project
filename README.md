@@ -48,72 +48,71 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 ## 4. Solutions:
 
-  - Lightning App (A-1):
+  - Lightning App ([Attachment 1](#attachment-1)):
   
     - Theme Customization
     - Branding
     - Tab Order
     
-  - Lightning App Page (Emergency page) (A-2):
+  - Lightning App Page (Emergency page) ([Attachment 2](#attachment-2)):
  
     - Visualforce pages
     - Embeded iFrames
     - LWC Weather Component
 
-  - Standard / Custom Objects (A-3):
+  - Standard / Custom Objects ([Attachment 3](#attachment-3)):
  
-  - Master Detail and Lookup relations (A-4):
+  - Master Detail and Lookup relations ([Attachment 4](#attachment-4)):
  
-  - Record Types for Different Processes (A-5):
+  - Record Types for Different Processes ([Attachment 5](#attachment-5)):
   
-  - Custom Record Layouts for the Object Record Type Pages (A-6): 
+  - Custom Record Layouts for the Object Record Type Pages ([Attachment 6](#attachment-6)): 
   
-  - Formula fields (A-7):
+  - Formula fields ([Attachment 7](#attachment-7)):
   
-  - Custom picklists (A-8):
+  - Custom picklists ([Attachment 8](#attachment-8)):
   
-  - Dashboards (A-9):
+  - Dashboards ([Attachment 9](#attachment-9)):
   
     - Charts
     - Reports
   
-  - Reports (A-10):
+  - Reports ([Attachment 10](#attachment-10)):
   
     - Standard
     - Custom
     - Joined Reports
 
-  - Approval Process (Contract object) (A-11):
+  - Approval Process (Contract object) ([Attachment 11](#attachment-11)):
   
-  - Users and Permissions (A-12):
+  - Users and Permissions ([Attachment 12](#attachment-12)):
   
-  - Flow for Expense and Income Calculations (A-13):
+  - Flow for Expense and Income Calculations ([Attachment 13](#attachment-13)):
   
-  - Telephony Integration (A-14):
+  - Telephony Integration ([Attachment 14](#attachment-14)):
   
-  - Gmail Integration (A-15):
+  - Gmail Integration ([Attachment 15](#attachment-15)):
   
-  - Outlook Integration (A-16):
+  - Outlook Integration ([Attachment 16](#attachment-16)):
   
-  - Creating API Connection (A-17):
+  - Creating API Connection ([Attachment 17](#attachment-17)):
   
-  - Using Apex Trigger for Emergency Task logic (A-18):
+  - Using Apex Trigger for Emergency Task logic ([Attachment 18](#attachment-18)):
   
-  - Creating Apex Class and Helper Class (A-19):
+  - Creating Apex Class and Helper Class ([Attachment 19](#attachment-19)):
 
-  - Apex Trigger for Cabin Occupied (A-20):
+  - Apex Trigger for Cabin Occupied ([Attachment 20](#attachment-20)):
   
-  - Data Import to Import Sample Data (A-21):
+  - Data Import to Import Sample Data ([Attachment 21](#attachment-21)):
   
-  - Cross Org Integration for Historic Data (A-22):
+  - Cross Org Integration for Historic Data ([Attachment 22](#attachment-22)):
   
-  - Custom Notifications (A-23):
-  
-  - Lookup Filters (A-24):
+  - Lookup Filters ([Attachment 23](#attachment-23)):
 
 ## 5.	Attachments:
 
-### A-1:
+### Attachment 1:  
+([Back to Solutions](#4-solutions)) 
 
   <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580347-86fac0b9-3f7c-457d-9f86-76c244816488.png">
 
@@ -132,7 +131,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
   <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186579936-a6581452-f23b-4982-a84c-b59d8d83867b.png">
 
 
-### A-2:
+### Attachment 2:
+([Back to Solutions](#4-solutions)) 
 
   <img width="1262" alt="image" src="https://user-images.githubusercontent.com/33948183/186581314-99a8087f-c24a-4543-914e-3d3d48995230.png">
 
@@ -340,15 +340,18 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
         </targets>
     </LightningComponentBundle>
 
-### A-3:
+### Attachment 3:
+([Back to Solutions](#4-solutions)) 
 
 <img width="654" alt="image" src="https://user-images.githubusercontent.com/33948183/186584523-e6e95d34-0b7f-46bc-a86b-5e45a26a738b.png">
 
-### A-4:
+### Attachment 4:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186584644-7b332a31-1f68-4677-b470-02c196260026.png">
 
-### A-5:
+### Attachment 5:
+([Back to Solutions](#4-solutions)) 
 
 #### Family and Company Record Types for Guest (Account) Object
 
@@ -374,7 +377,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186587020-167d20b9-3c4e-451c-8787-11ad3f1a130e.png">
 
-### A-6:
+### Attachment 6:
+([Back to Solutions](#4-solutions)) 
 
 #### Family and Company Custom Layouts for Guest (Account) Object
 
@@ -392,13 +396,15 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186588248-72f31f61-f863-4d9c-a523-fdc8ac813edd.png">
 
-### A-7:
+### Attachment 7:
+([Back to Solutions](#4-solutions)) 
 
 #### Commision Formula Field on Deal Object
 
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/33948183/186589362-31dfb6ce-f06d-4119-a3fd-e4a7abef8907.png">
 
-### A-8:
+### Attachment 8:
+([Back to Solutions](#4-solutions)) 
 
 #### Custom Picklists on Lead Object
 
@@ -408,11 +414,13 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186720128-39c8218d-3d69-4655-9dbd-29817e1ae306.png">
 
-### A-9:
+### Attachment 9:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1272" alt="image" src="https://user-images.githubusercontent.com/33948183/186721301-e4aa83cd-5d6e-4903-8185-d2bf4dd2923b.png">
 
-### A-10:
+### Attachment 10:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186722244-3c04728a-0e7a-4cd6-b4b4-868c903e8a5f.png">
 
@@ -440,7 +448,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186724273-9315d907-423c-449b-ba14-79e35d77f54d.png">
 
-### A-11:
+### Attachment 11:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186724885-d5074571-167a-4eb1-a9c3-31e346c7a43e.png">
 
@@ -454,17 +463,20 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725326-348ccdbe-cfa9-460e-996e-9e4c71e70ee4.png">
 
-### A-12:
+### Attachment 12:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725616-bf055e27-7a72-4b05-adc6-c632293f9413.png">
 
-### A-13:
+### Attachment 13:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186726497-27013a93-78c0-40aa-b031-8cfe0fc701f9.png">
 
 <img width="1378" alt="image" src="https://user-images.githubusercontent.com/33948183/186727740-05be4ad1-feaa-4eef-973c-d6f23c997490.png">
 
-### A-14:
+### Attachment 14:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186727976-0fe130d4-b301-4d5e-ab76-5d6a91b26531.png">
 
@@ -474,7 +486,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186728624-755096ff-0d45-4290-b2b0-9c371664b786.png">
 
-### A-15:
+### Attachment 15:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186728816-ee2d458e-7bcf-4c82-ad0e-488615ab4c44.png">
 
@@ -482,11 +495,13 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186729966-d40bee14-40c7-4407-b471-adef29b4bfe0.png">
 
-### A-16:
+### Attachment 16:
+([Back to Solutions](#4-solutions)) 
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186732002-9177a4e3-bf02-40a9-885e-faedb945b3d3.png">
 
-### A-17:
+### Attachment 17:
+([Back to Solutions](#4-solutions)) 
 
 #### API Connection of Weather LWC Component on Emergency Page
 
@@ -543,7 +558,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     }
 
 
-### A-18:
+### Attachment 18:
+([Back to Solutions](#4-solutions)) 
 
     trigger taskTrigger on Task (before insert){        
           for(Task t : Trigger.New){
@@ -562,7 +578,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     }
 
 
-### A-19:
+### Attachment 19:
+([Back to Solutions](#4-solutions)) 
 
 #### Emergency Task Manager Notification Trigger Apex Helper Class
 
@@ -584,7 +601,8 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     }
 
 
-### A-20:
+### Attachment 20:
+([Back to Solutions](#4-solutions)) 
 
     trigger cabinUpdateTrigger on OpportunityLineItem (after insert, after update) {
 
@@ -602,9 +620,24 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     }
 
 
+### Attachment 21:
+([Back to Solutions](#4-solutions)) 
 
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186733643-8d8b4491-f4aa-4ff4-9732-527a7bfc5b6f.png">
 
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186733724-c70764ad-a4fd-46d7-9a25-e0d30b69528c.png">
 
+### Attachment 22:
+([Back to Solutions](#4-solutions)) 
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186734246-df47c500-c829-420e-9c1c-4d3306eca374.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186734455-d287c8fb-2f09-4a59-a207-4f15d95ca52b.png">
+
+### Attachment 23:
+([Back to Solutions](#4-solutions)) 
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186734955-04c3624b-a7a8-4f79-98ae-0b83b21413b7.png">
 
 
 
