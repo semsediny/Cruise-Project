@@ -1,5 +1,7 @@
 <span style="text-align: center"><img width="90" alt="image" src="https://user-images.githubusercontent.com/33948183/186741201-369111e0-287e-416a-91b3-b1e64f560000.png"></span>
 
+<link rel="icon" type="image/x-icon" href="https://user-images.githubusercontent.com/33948183/186741201-369111e0-287e-416a-91b3-b1e64f560000.png">
+
 # TRIFORCIA CRUISE TRAVEL AGENCY APP PROJECT
 
 ## 1.  General:
