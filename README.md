@@ -97,10 +97,10 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
   
   - Creating API Connection (A-17):
   
-  - Creating Apex Class and Helper Classes (A-18):
+  - Using Apex Trigger for Emergency Task logic (A-18):
   
-  - Using Apex Trigger for Emergency Task logic (A-19):
-  
+  - Creating Apex Class and Helper Class (A-19):
+
   - Apex Trigger for Cabin Occupied (A-20):
   
   - Data Import to Import Sample Data (A-21):
@@ -459,6 +459,148 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725616-bf055e27-7a72-4b05-adc6-c632293f9413.png">
 
 ### A-13:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186726497-27013a93-78c0-40aa-b031-8cfe0fc701f9.png">
+
+<img width="1378" alt="image" src="https://user-images.githubusercontent.com/33948183/186727740-05be4ad1-feaa-4eef-973c-d6f23c997490.png">
+
+### A-14:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186727976-0fe130d4-b301-4d5e-ab76-5d6a91b26531.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186728243-239f11ce-7993-4e15-a47d-363e40a0ca55.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186728358-8333bd5f-4814-4fe2-a235-796851d56873.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186728624-755096ff-0d45-4290-b2b0-9c371664b786.png">
+
+### A-15:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186728816-ee2d458e-7bcf-4c82-ad0e-488615ab4c44.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186729134-d562a432-45f2-474f-9a10-ad9f9f99afcc.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186729966-d40bee14-40c7-4407-b471-adef29b4bfe0.png">
+
+### A-16:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186732002-9177a4e3-bf02-40a9-885e-faedb945b3d3.png">
+
+### A-17:
+
+#### API Connection of Weather LWC Component on Emergency Page
+
+    global class WebServiceLWC {
+        @AuraEnabled(cacheable=true)
+        global static WeatherData performCallout(String location) {
+
+            Http http = new Http();
+
+            HttpRequest req = new HttpRequest();
+            req.setEndpoint('callout:WeatherAPI?city=' + location + '&key=96ef390b59d74ccca1145468858df082');
+            req.setMethod('GET');
+
+
+            HttpResponse res = new HttpResponse();
+            res = http.send(req);
+            JSONParser parser = JSON.createParser(res.getBody());
+
+
+            WeatherData weather = new WeatherData();
+
+            while (parser.nextToken() != null) {
+                parser.nextValue();
+                if (parser.getCurrentName() == 'temp') {
+                    weather.cityTemp = Decimal.valueOf(parser.getText());
+                }else if(parser.getCurrentName() == 'city_name'){
+                    weather.cityName = parser.getText();
+                }else if(parser.getCurrentName() == 'state_code'){
+                    weather.state = parser.getText();
+                }else if(parser.getCurrentName() == 'timezone'){
+                    weather.cityTimeZone = parser.getText();
+                }else if(parser.getCurrentName() == 'wind_spd'){
+                    weather.cityWindSpeed = Decimal.valueOf(parser.getText());
+                }else if(parser.getCurrentName() == 'lat'){
+                    weather.cityLat = parser.getText();
+                }else if(parser.getCurrentName() == 'lon'){
+                    weather.cityLong = parser.getText();
+                }else if(parser.getCurrentName() == 'precip'){
+                    weather.cityPrecip = Decimal.valueOf(parser.getText());
+                }
+            }
+            return weather;
+        }
+        global class WeatherData {
+            @AuraEnabled public String cityName;
+            @AuraEnabled public String cityTimeZone;
+            @AuraEnabled public Decimal cityTemp;
+            @AuraEnabled public String state;
+            @AuraEnabled public Decimal cityWindSpeed;
+            @AuraEnabled public String cityLat;
+            @AuraEnabled public String cityLong;
+            @AuraEnabled public Decimal cityPrecip;
+        }
+    }
+
+
+### A-18:
+
+    trigger taskTrigger on Task (before insert){        
+          for(Task t : Trigger.New){
+              if(t.Subject == 'Emergency'){
+                 t.Priority = 'High';
+
+                 Set<String> recipinetsIds = new Set<String>();
+                 recipinetsIds.add('005IY000000LSUVYA4');
+
+                 CustomNotificationFromApex.notifyUsers(recipinetsIds, '000000000000000AAA');
+
+              }
+
+        }
+
+    }
+
+
+### A-19:
+
+#### Emergency Task Manager Notification Trigger Apex Helper Class
+
+    public class CustomNotificationFromApex {
+        public static void notifyUsers(Set<String> recipientsIds, String targetId){
+
+            CustomNotificationType notificationType = [SELECT Id, DeveloperName FROM CustomNotificationType WHERE DeveloperName = 'Emergency_Notification'];
+
+
+            Messaging.CustomNotification notification = new Messaging.CustomNotification();
+            notification.setTitle('Emergency Notification');
+            notification.setBody('An Emergency Task has been raised!');
+            notification.setNotificationTypeId(notificationType.Id);
+            notification.setTargetId(targetId);
+
+            notification.send(recipientsIds);
+
+        }
+    }
+
+
+### A-20:
+
+    trigger cabinUpdateTrigger on OpportunityLineItem (after insert, after update) {
+
+        List<cabin__c> newCabinList = new List<cabin__c>();
+
+        for(OpportunityLineItem oppLine : Trigger.New){
+            if(oppLine.Cabin__c != null){
+
+                Cabin__c cabin = [SELECT Id, Occupied__c FROM Cabin__c WHERE Id =: oppLine.Cabin__c];
+                cabin.Occupied__c = true;
+                newCabinList.add(cabin);
+            }
+        }
+        update newCabinList; 
+    }
+
 
 
 
