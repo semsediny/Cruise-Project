@@ -60,13 +60,13 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
     - Embeded iFrames
     - LWC Weather Component
 
-  - Standard / Custom Objects
+  - Standard / Custom Objects (A-3):
  
-  - Master Detail and Lookup relations
+  - Master Detail and Lookup relations (A-4):
  
-  - Record Types for Different Processes
+  - Record Types for Different Processes (A-5):
   
-  - Custom record layouts for the object record pages
+  - Custom Record Layouts for the Object Record Type Pages (A-6): 
   
   - Formula fields
   
@@ -134,4 +134,260 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 
 ### A-2:
 
+  <img width="1262" alt="image" src="https://user-images.githubusercontent.com/33948183/186581314-99a8087f-c24a-4543-914e-3d3d48995230.png">
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186581457-7281c98d-ceb8-4322-8566-5549c0327867.png">
   
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186582051-dd9c0768-3e2f-4c3b-99d8-fee2b6d5d8ef.png">
+  
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186582423-aea68cd3-38d8-42f3-83f0-831b79819800.png">
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186582515-229364c8-139a-4eee-8847-e0dfcfa09b3f.png">
+  
+####  Ship Map
+  
+    <apex:page showHeader="false">
+      <apex:iframe src="https://www.cruisemapper.com/"/>
+    </apex:page>
+
+#### Hospital Map
+
+    <apex:page >
+      <apex:iframe src="https://maps.google.com/maps?q=Florida%20hospitals&t=&z=7&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="true" id="theIframe"/>
+    </apex:page>
+    
+#### Weather Map
+
+##### HTML
+
+    <template>
+      <lightning-card title={getCityName}>
+          <lightning-layout>
+              <lightning-layout-item size="6" medium-device-size="4" padding="around-small">
+                  <lightning-combobox name="cities"
+                      label="Cities"
+                      value={value}
+                      placeholder="--Select--"
+                      options={options}
+                      onchange={handleChange} >
+                  </lightning-combobox>
+              </lightning-layout-item>
+          </lightning-layout>
+          <lightning-layout>
+                  <lightning-layout-item size="3" medium-device-size="4" padding="around-small">
+                      <lightning-card icon-name="standard:topic" title="Current Temperature">
+                          <div class="slds-align_absolute-center color-blue">
+                              <template if:true={result}>
+                                  {getConvertedTemp}
+                              </template>
+                          </div>
+                      </lightning-card>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="3" medium-device-size="4" padding="around-small">
+                      <lightning-card icon-name="utility:flow" title="Current Wind Speed">
+                          <div class="slds-align_absolute-center color-grey">
+                              <template if:true={result}>
+                                  {getCurrentWindSpeed}
+                              </template>
+                          </div>
+                      </lightning-card>
+                  </lightning-layout-item>
+                  <lightning-layout-item size="3" medium-device-size="4" padding="around-small">
+                      <lightning-card icon-name="standard:calibration" title="Precipitation">
+                          <div class="slds-align_absolute-center color-green">
+                              <template if:true={result}>
+                                  {getCurrentPrecip}
+                              </template>
+                          </div>
+                      </lightning-card>
+                  </lightning-layout-item>
+              </lightning-layout>
+          <lightning-map
+              map-markers={mapMarkers}
+              zoom-level={zoomLevel}>
+          </lightning-map>
+      </lightning-card>
+    </template>
+
+##### CSS
+
+    .color-blue {
+      background-color: #08a7da;
+      height: 100px;
+      color: white;
+      font-family: Tahoma;
+      font-size: 30px;
+      font-weight: 500;
+      border-radius: 25px;
+    }
+ 
+    .color-grey {
+      background-color: rgb(11, 236, 74);
+      height: 100px;
+      color: white;
+      font-family: Tahoma;
+      font-size: 30px;
+      font-weight: 500;
+      border-radius: 25px;
+    }
+ 
+    .color-green {
+      background-color:red;
+      height: 100px;
+      color: white;
+      font-family: Tahoma;
+      font-size: 30px;
+      font-weight: 500;
+      border-radius: 25px;
+    }
+    
+##### JS
+
+    import { LightningElement } from 'lwc';
+    import performCallout from '@salesforce/apex/WebServiceLWC.performCallout';
+
+    export default class WeatherLWC extends LightningElement {
+
+    lat;
+    long;
+
+    mapMarkers = [];
+    zoomLevel = 10;
+    result;
+    value;
+
+    connectedCallback() {
+        performCallout({location: 'Norfolk,VA'}).then(data => {
+            this.mapMarkers = [{
+                location: {
+                    Latitude: data['cityLat'],
+                    Longitude: data['cityLong']
+                },
+                title: data['cityName'] + ', ' + data['state'],
+            }];
+            this.result = data;
+        }).catch(err => console.log(err));
+
+    }
+
+    get getCityName() {
+        if (this.result) {
+            return this.result.cityName + ' Information';
+        } else {
+            return '---'
+        }
+    }
+
+    get getConvertedTemp() {
+        if (this.result) {
+            return Math.round((this.result.cityTemp * (9/5)) + 32) + ' deg';
+        } else {
+            return '--'
+        }
+    }
+
+    get getCurrentWindSpeed() {
+        if (this.result) {
+            return this.result.cityWindSpeed + ' mph';
+        } else {
+            return '--'
+        }
+    }
+
+    get getCurrentPrecip() {
+        if (this.result) {
+            return this.result.cityPrecip + " in"
+        } else {
+            return '--'
+        }
+    }
+
+    get options() {
+        return [
+            { label: 'Arvada, CO', value: 'Arvada,CO' },
+            { label: 'Austin, TX', value: 'Austin,TX' },
+            { label: 'Sacramento, CA', value: 'Sacramento,CA' },
+            { label: 'Raleigh, NC', value: 'Raleigh,NC' },
+            { label: 'Chesapeake, VA', value: 'Chesapeake,VA' }
+        ];
+    }
+
+    handleChange(event) {
+        this.value = event.detail.value;
+        performCallout({location: this.value}).then(data => {
+            this.mapMarkers = [{
+                location: {
+                    Latitude: data['cityLat'],
+                    Longitude: data['cityLong']
+                },
+                title: data['cityName'] + ', ' + data['state'],
+            }];
+            this.result = data;
+        }).catch(err => console.log(err));
+    }
+  }
+
+##### META XML
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+        <apiVersion>55.0</apiVersion>
+        <isExposed>true</isExposed>
+        <targets>
+            <target>lightning__AppPage</target>
+            <target>lightning__HomePage</target>
+            <target>lightning__RecordPage</target>
+        </targets>
+    </LightningComponentBundle>
+
+### A-3:
+
+<img width="654" alt="image" src="https://user-images.githubusercontent.com/33948183/186584523-e6e95d34-0b7f-46bc-a86b-5e45a26a738b.png">
+
+### A-4:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186584644-7b332a31-1f68-4677-b470-02c196260026.png">
+
+### A-5:
+
+#### Family and Company Record Types for Guest (Account) Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186585680-1fce9089-6582-458d-9f8c-5e22e51d1d18.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186585943-fe4e360c-1ea4-42e1-9f58-f1b79769f281.png">
+
+#### Family and Company Record Types for Lead Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186586139-d48d314b-47b5-4c5d-8c7c-e9654e84d53f.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186586330-a797ae35-0c59-41ea-8234-5db4e683dfe9.png">
+
+#### Ship Owner and Passenger Record Types for Contract Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186586399-d1156963-2921-41a7-9621-ea12264e3985.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186586627-3bea56b7-6bae-424d-b38c-8ac4e0e1283b.png">
+
+#### Cruise, Gulet and Yacth Record Types for Ship Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186586767-d3152631-9fac-40f0-a772-d8ae4d783361.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186587020-167d20b9-3c4e-451c-8787-11ad3f1a130e.png">
+
+### A-6:
+
+#### Family and Company Custom Layouts for Guest (Account) Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186587727-37c9dd21-7575-4b8f-a5e8-b95d6616fff4.png">
+
+#### Family and Company Custom Layouts for Lead Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186587893-3f068f43-1e67-4e10-a0c6-389a0bd2936e.png">
+
+#### Ship Owner and Passenger Custom Layouts for Contract Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186588122-d9748286-1a7f-4af9-8d4f-5f41b1e0d3d5.png">
+
+#### Cruise, Gulet and Yacth Custom Layouts for Ship Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186588248-72f31f61-f863-4d9c-a523-fdc8ac813edd.png">
