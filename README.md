@@ -68,9 +68,9 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
   
   - Custom Record Layouts for the Object Record Type Pages (A-6): 
   
-  - Formula fields
+  - Formula fields (A-7):
   
-  - Custom picklists
+  - Custom picklists (A-8):
   
   - Dashboards:
   
@@ -391,3 +391,15 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 #### Cruise, Gulet and Yacth Custom Layouts for Ship Object
 
 <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186588248-72f31f61-f863-4d9c-a523-fdc8ac813edd.png">
+
+### A-7:
+
+#### Commision Formula Field on Deal Object
+
+<img width="1280" alt="image" src="https://user-images.githubusercontent.com/33948183/186589362-31dfb6ce-f06d-4119-a3fd-e4a7abef8907.png">
+
+### A-8:
+
+
+
+
