@@ -72,44 +72,44 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
   
   - Custom picklists (A-8):
   
-  - Dashboards:
+  - Dashboards (A-9):
   
     - Charts
     - Reports
   
-  - Reports:
+  - Reports (A-10):
   
     - Standard
     - Custom
     - Joined Reports
 
-  - Approval process (Contract object)
+  - Approval Process (Contract object) (A-11):
   
-  - Users and permissions
+  - Users and Permissions (A-12):
   
-  - Flow for Expense and Income calculations
+  - Flow for Expense and Income Calculations (A-13):
   
-  - Telephony integration
+  - Telephony Integration (A-14):
   
-  - Gmail Integration
+  - Gmail Integration (A-15):
   
-  - Outlook Integration
+  - Outlook Integration (A-16):
   
-  - Creating API connection
+  - Creating API Connection (A-17):
   
-  - Creating Apex class and helper classes
+  - Creating Apex Class and Helper Classes (A-18):
   
-  - Using Apex Trigger for Emergency Task logic
+  - Using Apex Trigger for Emergency Task logic (A-19):
   
-  - Apex trigger for cabin occupied
+  - Apex Trigger for Cabin Occupied (A-20):
   
-  - Data import to import sample data
+  - Data Import to Import Sample Data (A-21):
   
-  - Cross Org integration for Historic data
+  - Cross Org Integration for Historic Data (A-22):
   
-  - Custom Notifications
+  - Custom Notifications (A-23):
   
-  - Lookup Filters
+  - Lookup Filters (A-24):
 
 ## 5.	Attachments:
 
@@ -399,6 +399,69 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
 <img width="1280" alt="image" src="https://user-images.githubusercontent.com/33948183/186589362-31dfb6ce-f06d-4119-a3fd-e4a7abef8907.png">
 
 ### A-8:
+
+#### Custom Picklists on Lead Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186720072-a02415a7-9739-45db-90b8-a0f941c72732.png">
+
+#### Custom Picklists on Cabin Object
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186720128-39c8218d-3d69-4655-9dbd-29817e1ae306.png">
+
+### A-9:
+
+<img width="1272" alt="image" src="https://user-images.githubusercontent.com/33948183/186721301-e4aa83cd-5d6e-4903-8185-d2bf4dd2923b.png">
+
+### A-10:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186722244-3c04728a-0e7a-4cd6-b4b4-868c903e8a5f.png">
+
+#### Campaigns with Leads Report
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186722574-e9d33933-9963-4bf1-b13e-9221ab54a5ef.png">
+
+#### Expenses with Opportunity Report
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186723026-a7dae3a8-88d0-4b60-9ea5-84fce6a606a5.png">
+
+#### Incomes with Opportunity Report
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186723500-8cc960fa-d50b-48ad-903c-0b2ae4e427cd.png">
+
+#### New Guest Custom Report Report
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186723718-010866df-3502-47da-a443-0e910247900f.png">
+
+#### New Members & Guests Report
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186723963-0afbd5d6-a8e9-462e-a510-1b87f289ff5e.png">
+
+#### Joined Reports
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186724273-9315d907-423c-449b-ba14-79e35d77f54d.png">
+
+### A-11:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186724885-d5074571-167a-4eb1-a9c3-31e346c7a43e.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725013-a6a9cfd7-28fa-4546-9708-6d3339e102f2.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725100-a829e225-0df8-49bd-9971-a3a9f725eaf6.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725185-e81e0850-58bb-4274-ab40-7c156bb437f6.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725247-ce894da3-c111-4207-a3ec-af61c3afe651.png">
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725326-348ccdbe-cfa9-460e-996e-9e4c71e70ee4.png">
+
+### A-12:
+
+<img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186725616-bf055e27-7a72-4b05-adc6-c632293f9413.png">
+
+### A-13:
+
+
+
 
 
 
