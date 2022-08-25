@@ -47,43 +47,91 @@ Triforcia Cruise Agency is not the owner of the ships. Cruise ship rooms are bei
   - Validations or filters needs to be placed for any kind of required fields or any kind of processes like avoiding double booking same room to different customers or not being able to close a deal without a contract selection etc. 
 
 ## 4. Solutions:
-  - Lightning App:
+
+  - Lightning App (A-1):
+  
     - Theme Customization
     - Branding
     - Tab Order
     
-  - Lightning App Page (Emergency page):
+  - Lightning App Page (Emergency page) (A-2):
+ 
     - Visualforce pages
     - Embeded iFrames
     - LWC Weather Component
 
   - Standard / Custom Objects
+ 
   - Master Detail and Lookup relations
+ 
   - Record Types for Different Processes
+  
   - Custom record layouts for the object record pages
+  
   - Formula fields
+  
   - Custom picklists
-  - Dashboards
+  
+  - Dashboards:
+  
     - Charts
     - Reports
-  - Reports
+  
+  - Reports:
+  
     - Standard
     - Custom
     - Joined Reports
+
   - Approval process (Contract object)
+  
   - Users and permissions
+  
   - Flow for Expense and Income calculations
+  
   - Telephony integration
+  
   - Gmail Integration
+  
   - Outlook Integration
+  
   - Creating API connection
+  
   - Creating Apex class and helper classes
+  
   - Using Apex Trigger for Emergency Task logic
+  
   - Apex trigger for cabin occupied
+  
   - Data import to import sample data
+  
   - Cross Org integration for Historic data
+  
   - Custom Notifications
+  
   - Lookup Filters
 
-## 4	Attachments:
+## 5.	Attachments:
 
+### A-1:
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580347-86fac0b9-3f7c-457d-9f86-76c244816488.png">
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580451-ffe88c82-666d-4838-9bed-3ab85a44bb88.png">
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580517-20b86fe9-b7f4-4329-b5e8-7765322b724c.png">
+  
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580594-674de759-e2bf-4ee3-8a7e-78ec8ca89794.png">
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580651-14f7fb12-08cb-4bb0-8d2c-5363e9a1594a.png">
+
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186580713-20ff4d37-1674-4be8-8bc2-de18dc022b08.png">
+  
+  <img width="1268" alt="image" src="https://user-images.githubusercontent.com/33948183/186579474-a8bf2a1a-6a0e-4720-8c43-b53a287a31fe.png">
+  
+  <img width="1284" alt="image" src="https://user-images.githubusercontent.com/33948183/186579936-a6581452-f23b-4982-a84c-b59d8d83867b.png">
+
+
+### A-2:
+
+  
