@@ -4,8 +4,6 @@
 
 ## 1.  General:
 
-<span style="color:blue">some *blue* text</span>
-
    - Triforcia is a Cruise Travel Agency company. Triforcia agency currently maintaining business processes in classical way and mostly by running business by assigning manual tasks to employees. Company has a website for customers to interact and check deals. The website is also used for advertisement purpose. All customer communications and processes handled by emails, phone calls and excel sheets.
 
    - Company can’t keep up with increased customer volume and agile response requirements. Old manual business processes are not enough to keep growth rate in a maximum level.
@@ -16,7 +14,7 @@
 
 ## 2.  Company Information:
 
-   - Triforcia Cruise Agency is providing staying and entertaining services on Cruise Ships. Customers can book a room on a ship and select pre-defined entertainment packages during sail duration. 
+   - Triforcia Cruise Agency is providing booking and entertaining services on Cruise Ships. Customers can book a room on a ship and select pre-defined entertainment packages during sail duration. 
 
    - They can attend standard events on the ship. Also, they can attend specific events as well with extra costs. Based on the route of the ships, some specific events can be sold to customers in addition to ship room or cabin allocation.
 
@@ -30,11 +28,11 @@
 
   - Basic sale process should start with a Campaign (Advertisement, Email, Phone etc). Then potential customers need to be put into lead category. Once Leads shows interest about buying offered products or services, they need to be converted to Guests, Members and Deals records.
 
-  - Dynamic data like ship, cabin, product and contract needs to be stored separately to make data more manageable in case of future updates. Also, relation between these objects needs to be defined correctly so that for example if a ship has been deleted related cabins also needs to be deleted from the database.
+  - Dynamic data like ship, cabin, product and contract needs to be stored separately to make data more manageable in case of future updates. Also, relation between these objects needs to be defined correctly, so that, for example, if a ship has been deleted related cabins also needs to be deleted from the database.
 
   - For strategic planning, also expanse and income records need to be created from every completed sale. 
 
-  - An internal approval process needs to be set for contract sign off. For initial phase, contracts that have commission rate less than %20 will be allowed to be signed off by deal owner. If it is more than %20, direct manager of deal owner needs to approve signing off of the related contract. The approval process needs to be created in optimum way so that future approval steps or conditions can be added or removed easily and quickly.
+  - An internal approval process needs to be set for contract sign off. For initial phase, contracts that have commission rate less than %20 will be allowed to be signed off by deal owner. If it is more than %20, direct manager of deal owner needs to approve signing off of the related contract. The approval process needs to be created in optimum way, so that future approval steps or conditions can be added or removed easily and quickly.
 
   - In addition to business process, an additional emergency process needs to be defined for urgent health evacuation or broken ship evacuation. In this process, nearby hospitals and helicopter agencies will be our additional stakeholders. Since the process requires special attention and mostly human interactions, this process will be handled on a separate page as tasks and responsible users will handle tasks urgently under supervision of their managers. The process should include necessary assignments, notifications, emails, dashboards for available nearby hospitals, helicopter agencies, instant real-time weather conditions, ship, hospital, helicopter details etc.
 
@@ -44,11 +42,11 @@
 
   - Triforcia Cruise Travel Agency have some historic data available from previous processes or applications that can be incorporated to this Salesforce app. These data also need to be imported to Salesforce environment. 
 
-  - In addition to above historic data there are also some historic data on a separate Salesforce org that needs to be shown as separate tab on current Salesforce org. In order to fulfill this requirement, a cross org connection needs to be established and related data needs to be present on a separate custom tab in same app.
+  - In addition to above historic data, there are also some historic data on a separate Salesforce org that needs to be shown as separate tab on current Salesforce org. In order to fulfill this requirement, a cross org connection needs to be established and related data needs to be present on a separate custom tab in same app.
 
-  - Previously used systems like gmail, outlook, telephony etc. needs to be integrated applications so that end users can use them during marketing and sale process.
+  - Previously used systems like gmail, outlook, telephony etc. needs to be integrated applications, so that end users can use them during marketing and sale process.
 
-  - Validations or filters needs to be placed for any kind of required fields or any kind of processes like avoiding double booking same room to different customers or not being able to close a deal without a contract selection etc. 
+  - Validations or filters needs to be placed for any kind of required fields or any kind of processes. Issues like avoiding double booking same room to different customers or not being able to close a deal without a contract selection needs to be resolved by using validation rules, lookup filters, formula fields etc. 
 
 ## 4. Solutions:
 
